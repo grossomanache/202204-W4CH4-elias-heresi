@@ -5,7 +5,7 @@ import PhoneContext from "../../contexts/PhoneContext";
 describe("Given the Keyboard component", () => {
   describe("When the component is instantiated", () => {
     test("Then 11 keys will be created", () => {
-      const addDigit = () => {};
+      const addDigit = jest.fn();
       const expectedNumberOfKeys = 11;
 
       render(
