@@ -1,6 +1,6 @@
 import Keyboard from "./Keyboard";
 import { render, screen } from "@testing-library/react";
-import PhoneContext from "../../contexts/PhoneContext";
+import PhoneContextProvider from "../../contexts/PhoneContextProvider";
 
 describe("Given the Keyboard component", () => {
   describe("When the component is instantiated", () => {
@@ -9,9 +9,9 @@ describe("Given the Keyboard component", () => {
       const expectedNumberOfKeys = 11;
 
       render(
-        <PhoneContext.Provider value={addDigit}>
+        <PhoneContextProvider value={addDigit}>
           <Keyboard />
-        </PhoneContext.Provider>
+        </PhoneContextProvider>
       );
 
       const createdDisplay = screen.getAllByRole("button");
